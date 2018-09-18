@@ -91,12 +91,12 @@ vault auth enable ldap
 Setup LDAP
 ```bash
 vault write auth/ldap/config \
-    url="ldap://192.168.5.90" \
-    userdn="ou=LiveU Users,dc=liveu,dc=tv" \
-    groupdn="ou=Security Groups,dc=liveu,dc=tv" \
+    url="ldap://192.168.5.1" \
+    userdn="ou=Users,dc=domain,dc=com" \
+    groupdn="ou=Security Groups,dc=domain,dc=com" \
     groupfilter="(&(objectClass=group)(member:1.2.840.113556.1.4.1941:={{.UserDN}}))" \
     groupattr="cn" \
-    upndomain="liveu.tv" \
+    upndomain="domain.com" \
     insecure_tls=true \
     starttls=false
 ```
@@ -109,6 +109,6 @@ Setup your Policies
 Setup Your users and groups
 ```bash
 vault write auth/ldap/groups/devops policies=default
-vault write auth/ldap/users/danielpana groups=devops policies=default
-vault login -method=ldap username=danielpana
+vault write auth/ldap/users/user groups=devops policies=default
+vault login -method=ldap username=user
 ```

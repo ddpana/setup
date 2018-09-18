@@ -31,13 +31,13 @@ sudo gem install test-kitchen
 cd ~
 
 # Get the source code from the repository
-git clone ssh://danielpana@midas:29418/liveu
-git clone ssh://danielpana@midas:29418/automation
+git clone ssh://user@github:29418/main
+git clone ssh://user@github:29418/automation
 
 # Fix the missing paths
-ln -s ~/liveu/py ~/automation/liveu/py
-ln -s ~/liveu/tools ~/automation/liveu/tools
-ln -s ~/liveu/build ~/automation/liveu/build
+ln -s ~/main/py ~/automation/main/py
+ln -s ~/main/tools ~/automation/main/tools
+ln -s ~/main/build ~/automation/main/build
 
 # Go to the folder containing .kitchen.yml
 cd ~/automation/auto/infra/sdk/deployment/ansiblefiles/

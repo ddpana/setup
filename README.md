@@ -1,7 +1,7 @@
 # Setup
-This is a general setup of any ubuntu linux I am working with.
+This is a general setup of any ubuntu 16.04 linux I am working with.
 
-# Install
+### Install
 ```
 ~$ sudo apt update
  
@@ -13,3 +13,12 @@ This is a general setup of any ubuntu linux I am working with.
 
 ~$ python3 setup.py
 ```
+
+### Install Kitchen
+
+[KITCHEN Installation](KITCHEN.md)
+
+### Install Vault with LDAP auth
+
+[VAULT Installation](VAULT.md)
+
